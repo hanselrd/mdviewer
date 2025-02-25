@@ -13,6 +13,7 @@ func (m Message) Status() Status {
 	if m.EventType != EventTypeStatus {
 		return StatusReserved
 	}
+
 	switch m.Price {
 	case -1:
 		return StatusHalted
@@ -21,6 +22,7 @@ func (m Message) Status() Status {
 	case 1:
 		return StatusTrading
 	}
+
 	panic(m.Price)
 }
 

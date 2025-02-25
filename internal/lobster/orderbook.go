@@ -15,5 +15,6 @@ func (pl PriceLevel) Occupied() bool {
 	case -9999999999, 9999999999:
 		return pl.Size == 0
 	}
+
 	return false
 }
